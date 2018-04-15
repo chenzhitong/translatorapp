@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.redirect('/');
 }).post('/', (req, res, next) => {
   // Send Tester's Fee
-  const intent = api.makeIntent({NEO:5, GAS:0}, 'AQSgxHwrKhSfSf1bgqeKR5B9Y4Jykm3DXK');
+  const intent = api.makeIntent({NEO:1, GAS:20}, 'AQSgxHwrKhSfSf1bgqeKR5B9Y4Jykm3DXK');
   var config = {
     net: 'TestNet', // The network to perform the action, MainNet or TestNet.
     address: 'AeBpauNouqK7DS69neKm3hgxLQv6MowjNf',  // This is the address which the assets come from.
