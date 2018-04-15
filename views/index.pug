@@ -1,0 +1,120 @@
+extends layout_common
+
+block content
+  // start page sub header
+  .section.page-subheader
+    .container-fluid
+      div
+        form.form-inline.pull-left(action='')
+          .form-group
+            label(for='email')
+              | English 
+              a.glyphicon.glyphicon-pencil(href='#' data-toggle='modal' data-target='#change_language')
+              span.root-icon
+            select#choose_language.form-control(name='')
+              option(value='' selected='') Japanese
+              option(value='') Chinese
+              option(value='add_language') Add Language
+        form.form-inline.pull-right(action='')
+          .form-group
+            input#search.form-control(type='text' placeholder='Search')
+  // start banner
+  section#main-content.section.section-wrapper
+    .container
+      .table-responsive
+        ul.nav.nav-pills
+          li.active
+            a(data-toggle='tab' href='#text') Text
+          li
+            a(href='#tags' data-toggle='tab') Tags
+          li
+            a(href='#images' data-toggle='tab') Images
+          // <li><a href="#">Menu 3</a></li>
+          li.pull-right
+            a(href='#removed' data-toggle='tab') Removed
+        form(action='/audit' method='post')
+          table.table1.table.table-bordered.table-striped.table-hover.tab-content
+            thead
+              tr
+                th English (Source text)
+                th Google Translation (Japanese)
+                th Translator A
+            tbody#text.tab-pane.fade.in.active
+              tr
+                td lorem ipsom dolor site amit
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='lorem ipsom dolor site amit')
+              tr
+                td consectetur adipisicing elit
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='consectetur adipisicing elit')
+              tr
+                td Labore placeat maxime, dignissimos et repudiandae natus omnis consectetur.
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder=' Labore placeat maxime, dignissimos et repudiandae natus omnis consectetur.')
+              tr
+                td
+                  | Error, quod ad. Voluptatum vitae modi libero ratione hic placeat labore ullam cupiditate.
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Error, quod ad. Voluptatum vitae modi libero ratione hic placeat labore ullam cupiditate.')
+            tbody#tags.tab-pane.fade
+              tr
+                td Website Title
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Website Title')
+              tr
+                td Subtitle
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Subtitle')
+              tr
+                td Hello world
+                td &#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...&#x30ED;&#x30EC;&#x30E0;...
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Hello World')
+            tbody#images.tab-pane.fade
+              tr
+                td(colspan='2')
+                  img(src='images/Coffee.jpg' alt='Coffe')
+                  .img-meta
+                    a.btn.btn-default.btn-sm(href='#' target='_blank') Open in new tab
+                    p images/Coffee.jpg
+                    span 600 x 400
+                td
+                  input(type='file')
+              tr
+                td(colspan='2')
+                  img(src='images/juice.jpg' alt='Juice')
+                  .img-meta
+                    a.btn.btn-default.btn-sm(href='#' target='_blank') Open in new tab
+                    p images/juice.jpg
+                    span 600 x 400
+                td
+                  input(type='file')
+            tbody#removed.tab-pane.fade
+              tr
+                td lorem ipsom
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Enter Translation Text')
+              tr
+                td lorem ipsom
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Enter Translation Text')
+              tr
+                td lorem ipsom
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Enter Translation Text')
+              tr
+                td lorem ipsom
+                td
+                  textarea#translator_b.form-control(name='translator_b' cols='30' rows='5' placeholder='Enter Translation Text')
+            tfoot
+              td(colspan='3')
+                button.btn.btn-primary.pull-right(type='submit') Submit
+                button.btn.btn-warning.pull-right(type='reset' style='margin-right: 5px;') Cancel
+

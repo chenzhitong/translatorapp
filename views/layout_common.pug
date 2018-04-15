@@ -1,0 +1,86 @@
+doctype html
+html
+  head
+    title Translation page
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='css/bootstrap.min.css')
+    link(rel='stylesheet' href='css/style.css')
+    script(src='js/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+  body
+  // start page-header
+  .section.page-header
+    .container-fluid
+      .row
+        .col-sm-6
+          a.btn.btn-default(href='#' style='margin-right: 5px;')
+            span.glyphicon.glyphicon-arrow-left
+          span http://example.com
+        .col-sm-6
+          form.pull-right(action='#')
+            button.btn.btn-default(type='button' style='margin-right: 5px;') Save
+            button.btn.btn-primary(type='button') Save &amp; Publish
+  block content
+  // main-footer
+  footer.main-footer
+    .footer-rool
+    .container
+      p
+        | Copyright &copy; 
+        a(href='http://samepagenet.com' target='_blank') Samepagenet.com
+      .separator
+      ul.list-inline
+        li
+          a(href='/') Home
+        li
+          a(href='#') Donate/Support
+        li
+          a(href='#') Primacy Policy
+        li
+          a(href='#') Terms of Services
+  // change language modal
+  #change_language.modal.fade(role='dialog')
+    .modal-dialog
+      // Modal content
+      .modal-content
+        .modal-header
+          button.close(type='button' data-dismiss='modal') &times;
+          h4.modal-title Change the language of the page
+        .modal-body
+          form(action='')
+            .form-group
+              select.form-control(name='' id='')
+                option(selected='' value='') -- SELECT LANGUAGE --
+                option(value='') English
+                option(value='') Japanese
+                option(value='') Chinese
+                option(value='') Vietnames
+                option(value='') Arabic
+                option(value='') French
+        .modal-footer
+          button.btn.btn-warning(type='button' data-dismiss='modal') Cancel
+          button.btn.btn-Primary(type='button' data-dismiss='modal') Ok
+  // Add language modal
+  #add_language.modal.fade(role='dialog')
+    .modal-dialog
+      // Modal content
+      .modal-content
+        .modal-header
+          button.close(type='button' data-dismiss='modal') &times;
+          h4.modal-title Add language for the page
+        .modal-body
+          form(action='')
+            .form-group
+              select.form-control(name='' id='')
+                option(selected='' value='') -- SELECT LANGUAGE --
+                option(value='') English
+                option(value='') Japanese
+                option(value='') Chinese
+                option(value='') Vietnames
+                option(value='') Arabic
+                option(value='') French
+        .modal-footer
+          button.btn.btn-warning(type='button' data-dismiss='modal') Cancel
+          button.btn.btn-Primary(type='button' data-dismiss='modal') Ok
+  script(type='text/javascript' src='js/main.js')

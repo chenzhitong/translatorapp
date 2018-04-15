@@ -1,0 +1,70 @@
+extends layout_common
+
+block content
+  // start page sub header
+  .section.page-subheader
+    .container-fluid
+      div
+        form.form-inline.pull-left(action='')
+          .form-group
+            label
+              | English 
+              span.root-icon
+            label Japanese
+  // start banner
+  section#main-content.section.section-wrapper
+    .container
+      form(action='/compare' method='post')
+        .panel.panel-primary
+          .panel-heading
+            strong Old Site (Before translation)
+          .panel-body
+            iframe.site-preview(src='https://tebura.ninja/ico')
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 1
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 2
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 3
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 4
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 5
+        .panel.panel-primary.clearfix
+          .panel-heading
+            strong New Site (After translation)
+          .panel-body
+            iframe.site-preview(src='https://tebura.ninja/ico')
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 1
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 2
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 3
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 4
+            .radio
+              label
+                input(type='radio' name='optradio')
+                | 5
+          .panel-footer.clearfix
+            button.btn.btn-primary.pull-right(type='submit') Confirm
+            button.btn.btn-warning.pull-right(type='reset' style='margin-right: 5px;') Cancel

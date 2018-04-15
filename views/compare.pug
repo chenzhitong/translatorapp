@@ -1,0 +1,49 @@
+extends layout_common
+
+block content
+  // start page sub header
+  .section.page-subheader
+    .container-fluid
+      div
+        form.form-inline.pull-left(action='')
+          .form-group
+            label
+              | English 
+              span.root-icon
+            label Japanese
+  // start banner
+  section#main-content.section.section-wrapper
+    .container
+      .panel.panel-primary
+        .panel-heading
+          strong Compare Site with analytics
+        .panel-body
+          .table-responsive
+            table.table.table-bordered.table-hover.table-striped.table1.compare-table
+              thead
+                tr
+                  th Name
+                  th Old site
+                  th New site
+                  th Status
+              tbody
+                tr
+                  td Total Visitor
+                  td ****
+                  td ****
+                  td Improved or Not
+                tr
+                  td Total Pageviews
+                  td ****
+                  td ****
+                  td Improved or Not
+                tr
+                  td Bounce Rate
+                  td **%
+                  td **%
+                  td Improved or Not
+                tr
+                  td SEO Score
+                  td **
+                  td **
+                  td Improved or Not
